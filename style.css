@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    font-size: medium;
+    background-image: url("Image/background.jpeg");
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+.text-black {
+    color: black;
+}
+
+#logo img {
+    height: 60px;
+    max-height: 60px;
+    width: auto;
+}
+
+.bg-grey{
+    background-color: #9c9fab;
+}
+
+#header {
+    background: #ced3d4;
+    color: black;
+    padding: 5px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.table-bordered{
+    border: 2px solid black;
+}
+
+.header {
+    border: 1px solid #D6CFC7;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 80px;
+    align-items: center;
+    grid-gap: 30px;
+}
+
+.btn{
+    width: auto;
+}
+
+img.tengah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    height: 295px;
+    font-size: small;
+}
+
+table {
+    border: 2px solid black;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.table{
+    font-size: medium;
+    vertical-align: middle;
+}
+
+.title{
+    font-size: xx-large;
+}
+
+.text-left{
+    text-align: left;
+}
+
+nav {
+    font-size: medium;
+}
+
+.nav-dark{
+    background-color: #708090;
+}
+
+.bg-steel{
+    background-color: #e0e5e5	;
+}
+
+.red{
+    color: red;
+}
+
+.text-edit{
+    color: #7C93C3;
+}
+
+/* .bookroom{
+    border : 1px solid #8a8888;
+    padding : 5px 5px 5px 20px;
+} */
+
+/* .booking{
+    border : 1px solid #8a8888;
+    padding : 5px 5px 5px 20px;
+} */
+
+
+.table-responsive{
+    height: calc(100vh - 250px);
+}
+.mt-section{
+    margin-top: 60px;
+}
+
+

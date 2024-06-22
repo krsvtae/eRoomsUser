@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Booking Room</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./Navbar.html" />
+  <link rel="shortcut icon" href="./favicon.ico">
+  <link rel="shortcut icon" href="./Image/Meeting.ico">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body style="background-color: white;">
+  <nav class="navbar fixed-top navbar-expand-lg nav-dark">
+    <div class="container">
+      <a class="navbar-brand" href="dashboardRoom.html"><img src="../Image/boardmeeting.png" width="60px"
+          alt="eRooms Icon">
+        &nbsp;<span class="fs-4 text-white"><strong>eRooms</strong></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Master
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./listDept.html">Department</a></li>
+              <li><a class="dropdown-item" href="./listRoom.html">Room</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Booking
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./bookingRoom.html">Booking Room</a></li>
+              <li><a class="dropdown-item" href="./historyUser.html">History</a></li>
+              <li><a class="dropdown-item" href="./updateCancel.html">Meeting Schedule</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" data-bs-auto-close="outside">
+              Report
+            </a> -->
+            <ul class="dropdown-menu" aria-labelledby="navbar-dropdown-link">
+              <li><a class="dropdown-item" href="./report.html">Monthly Department</a></li>
+              <li><a class="dropdown-item" href="./chart.html">Monthly Meeting Room</a></li>
+              <li><a class="dropdown-item" href="./historyDept.html">History Department</a>
+              </li>
+              <li><a class="dropdown-item" href="./incoming.html">Incoming Meeting</a></li>
+              
+              <!-- <li class="dropdown dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">Outstanding</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown-link">
+                          <li><a href="#" class="dropdown-item">Overdue</a></li>
+                          <li><a href="#" class="dropdown-item">On Going</a></li>
+                          <li><a href="./report.html" class="dropdown-item">Report</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" data-bs-auto-close="outside">
+              Dashboard TV
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbar-dropdown-link">
+              <li><a class="dropdown-item" href="./dashboardTv.html">Dashboard TV</a></li>
+              <!-- <li class="dropdown dropend">
+                        <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                          aria-expanded="false">Outstanding</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown-link">
+                          <li><a href="#" class="dropdown-item">Overdue</a></li>
+                          <li><a href="#" class="dropdown-item">On Going</a></li>
+                          <li><a href="./report.html" class="dropdown-item">Report</a></li> -->
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <div style="position: relative;">
+            <a class="nav-link text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Profile
+              <img src="../Image/profile.png" width="60px" alt="Gambar Profile" class="img-fluid navbar-brand" />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../changepass.html">Change Password</a>
+              </li>
+              <li><a class="dropdown-item" href="../update.html">Update Profile</a></li>
+              <li><a class="dropdown-item" href="../index.html">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container mt-section">
+    <div class="container-fluid px-4">
+      <div class="row justify-content-center">
+        <div class="card-body mt-1">
+          <h3 class="text-center mt-5 mb-4"><strong>Repeated Meeting (Weekly)</strong></h3>
+          <div class="row bg-steel py-2 mb-2 pb-3">
+            <div class="col-12 py-4 px-4">    
+              <div> <strong>Booking by : kristina </strong> </div>
+              <div class="row justify-content-left" >
+                <fieldset class="booking mt-2">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                      <label class="form-label">Start Date : </label>
+                      <br>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                      <label class="form-label">Start Time :</label>
+                      <br>
+                      <input type="time" class="form-control" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4 ">
+                      <label class="form-label"> End Date : </label>
+                      <br>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                      <label class="form-label">End Time : </label>
+                      <br>
+                      <input type="time" class="form-control" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                      <label class="form-label" for="form7Example1">
+                        Every :</label>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Monday</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Tuesday</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Wednesday</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                          value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Thursday</label>
+                      </div>
+                      <div class="form-check ">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                          value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Friday</label>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                      <label class="form-label" for="form7Example1"> Total Person :</label>
+                      <input type="text" id="form7Example1" class="form-control" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                        <label for="Gender" class="form-label">Room : <br></label>
+                        <select for="Gender" aria-label="Default select example" class="form-control">
+                          <option selected>----------</option>
+                          <option value="1">K3LH8</option>
+                          <option value="2">K3LH9</option>
+                          <option value="3">K3LH11</option>
+                          <option value="4">K3LH12</option>
+                          <option value="5">Ex R. Makan BOD</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6 col-sm-6 col-md-6 mt-4">
+                        <label for="Department" class="form-label">Department : <br></label>
+                        <select for="Gender" aria-label="Default select example" class="form-control">
+                          <option selected>----------</option>
+                          <option value="1">SCM</option>
+                          <option value="2">FAT</option>
+                          <option value="3">Engineering</option>
+                          <option value="4">ICT</option>
+                        </select>
+                      </div>
+                  </div>
+                </fieldset>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                  <a class="btn btn-success mb-4" type="button" href="./dashboardRoom.html">
+                    Proceed</a>
+                  <a class="btn btn-danger mb-4" type="button" href="./dashboardRoom.html">
+                    Cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
