@@ -17,8 +17,382 @@
             overflow-y: scroll;
         }
     </style>
-
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/locale/id.min.js"></script>
+    <script>
+      moment.locale('id')
+      let arrData = [
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 08:00:00",
+          "k3lh8" : {
+            'status' : false,
+            'booked' : "Booked by Eva <br />(HCGS)"
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : false,
+            'booked' : 'Booked by Kiwi <br />(HC)'
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 08:30:00" , 
+          "k3lh8" : {
+            'status' : false,
+            'booked' : "Booked by Eva <br />(HCGS)"
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : false,
+            'booked' : 'Booked by Santi <br/> (ICT)'
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : false,
+            'booked' : 'Booked by Kiwi <br />(HC)'
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 09:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : false,
+            'booked' : 'Booked by Rerew <br/> (ICT)'
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 09:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD')+ " 10:00:00" ,
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 10:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 11:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 13:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 13:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 13:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 14:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 14:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 15:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 15:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 16:00:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+        {
+          "time" : moment().format('YYYY-MM-DD') + " 16:30:00",
+          "k3lh8" : {
+            'status' : true,
+            'booked' : ""
+          },
+          "k3lh9": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh11": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh12": {
+            'status' : true,
+            'booked' : ''
+          },
+          "k3lh13": {
+            'status' : true,
+            'booked' : ''
+          }
+        },
+      ]
+    </script>
 </head>
 
 <body style="background-color: white;">
@@ -33,7 +407,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Master
@@ -42,7 +416,7 @@
               <li><a class="dropdown-item" href="./listDept.html">Department</a></li>
               <li><a class="dropdown-item" href="./listRoom.html">Room</a></li>
             </ul>
-          </li> -->
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -54,18 +428,17 @@
               <li><a class="dropdown-item" href="./updateCancel.html">Meeting Schedule</a></li>
             </ul>
           </li>
-          <!-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false" data-bs-auto-close="outside">
               Report
-            </a> -->
+            </a>
             <ul class="dropdown-menu" aria-labelledby="navbar-dropdown-link">
               <li><a class="dropdown-item" href="./report.html">Monthly Department</a></li>
               <li><a class="dropdown-item" href="./chart.html">Monthly Meeting Room</a></li>
               <li><a class="dropdown-item" href="./historyDept.html">History Department</a>
               </li>
               <li><a class="dropdown-item" href="./incoming.html">Incoming Meeting</a></li>
-              
               <!-- <li class="dropdown dropend">
                         <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown"
                           aria-expanded="false">Outstanding</a>
@@ -109,20 +482,19 @@
       </div>
     </div>
   </nav>
-
   <section class="container mt-section">
     <div class="container-fluid px-4">
       <div class="row justify-content-center">
         <div class="card-body mt-1">
           <h3 class="text-center mt-5 mb-4"><strong>Booking Meeting Room</strong></h3>
           <div class="col-12">
-            <label class="col-form-label"><strong> Booking Date : </strong><input type="date" /></label>
-            <button type="button" class="btn btn-primary btn-sm">Check</button>
+            <label class="col-form-label"><strong> Booking Date : </strong><input type="date" id="bookDate" value="" /></label>
+            <button type="button" class="btn btn-primary btn-sm" id="btn-check">Check</button>
             <a class="btn btn-secondary btn-sm" type="button" href="./dashboardRoom.html">
               Back to Dashboard</a>
           </div>
           <div class="col-12 text-right mt-2">
-            <h6> <strong> Today : 19 Januari 2024 </strong></h6>
+            <h6> <strong id="lbl-today"> Today :  </strong></h6>
           </div>
           <div class="row bg-steel pb-3">
             <div class="col-md-4 col-sm-6 col-xs-12 mt-3">
@@ -224,7 +596,7 @@
             </div> -->
           </div>
           <div class="col-12 text-left mt-4">
-            <h6> <strong> Booking Date : 19 Januari 2024 </strong></h6>
+            <h6> <strong id="lbl-date"> Booking Date :  </strong></h6>
           </div>
           <div class="table-responsive">
             <table class="table table-striped table-hover bg-steel mt-1">
@@ -238,8 +610,9 @@
                   <th scope="col">Ex R. Makan BOD</th>
                 </tr>
               </thead>
-
-              <tbody class="table-group-divider">
+              <tbody id="data-table" class="table-group-divider">
+              </tbody>
+              <!-- <tbody class="table-group-divider">
                 <tr class="text-center">
                   <td style="text-align: center;  vertical-align:middle;"><strong>08.00 AM</strong></td>
                   <td scope="row" style="text-align: center;  vertical-align:middle;"> <strong
@@ -444,7 +817,7 @@
                   <td> <a class="btn btn-secondary mt-2 col-4" type="button" href="./meetingRoom5.html"><i
                         class="fa-solid fa-pen-to-square " title="book this room"></i></a> </td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
           </div>
         </div>
@@ -454,6 +827,66 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
+  <script>
+    $('#btn-check').click((e) => {
+      let val = $('#bookDate').val();
+      if(val){
+        $('#lbl-date').html('Booking Date: ' + moment(val).format('LL'))
+      }
+      return true;
+    })
+    $(document).ready(function() {
+      $('#lbl-today').html('Today : ' + moment().format('LL'))
+
+      let htmTbody = '';
+      arrData.forEach(item => {
+        let col8 = col9 = col11 = col12 = col13 = ''
+
+        if(item.k3lh8.status){
+          col8 = `<td><a class="btn btn-secondary mt-2 col-4" type="button" href="javascript:onCLick('./meetingRoom1.html','${item.time}')"><i class="fa-solid fa-pen-to-square" title="book this room"></i></a></td>`
+        }else{
+          col8 = `<td scope="row" style="text-align: center;  vertical-align:middle;"> <strong class="text-center p-1 mb-2">${item.k3lh8.booked}</strong></td>`
+        }
+        if(item.k3lh9.status){
+          col9 = `<td><a class="btn btn-secondary mt-2 col-4" type="button" href="javascript:onCLick('./meetingRoom2.html','${item.time}')"><i class="fa-solid fa-pen-to-square" title="book this room"></i></a></td>`
+        }else{
+          col9 = `<td scope="row" style="text-align: center;  vertical-align:middle;"> <strong class="text-center p-1 mb-2">${item.k3lh9.booked}</strong></td>`
+        }
+        if(item.k3lh11.status){
+          col11 = `<td><a class="btn btn-secondary mt-2 col-4" type="button" href="javascript:onCLick('./meetingRoom3.html','${item.time}')"><i class="fa-solid fa-pen-to-square" title="book this room"></i></a></td>`
+        }else{
+          col11 = `<td scope="row" style="text-align: center;  vertical-align:middle;"> <strong class="text-center p-1 mb-2">${item.k3lh11.booked}</strong></td>`
+        }
+        if(item.k3lh12.status){
+          col12 = `<td><a class="btn btn-secondary mt-2 col-4" type="button" href="javascript:onCLick('./meetingRoom4.html','${item.time}')"><i class="fa-solid fa-pen-to-square" title="book this room"></i></a></td>`
+        }else{
+          col12 = `<td scope="row" style="text-align: center;  vertical-align:middle;"> <strong class="text-center p-1 mb-2">${item.k3lh12.booked}</strong></td>`
+        }
+        if(item.k3lh13.status){
+          col13 = `<td><a class="btn btn-secondary mt-2 col-4" type="button" href="javascript:onCLick('./meetingRoom5.html','${item.time}')"><i class="fa-solid fa-pen-to-square" title="book this room"></i></a></td>`
+        }else{
+          col13 = `<td scope="row" style="text-align: center;  vertical-align:middle;"> <strong class="text-center p-1 mb-2">${item.k3lh13.booked}</strong></td>`
+        }
+        
+
+        htmTbody += `
+          <tr class="text-center">
+            <td style="text-align: center;  vertical-align:middle;"><strong>${moment(item.time).format('HH:mm')}</strong></td>
+            ${col8}
+            ${col9}
+            ${col11}
+            ${col12}
+            ${col13}
+          </tr>
+        `
+      })
+      $('#data-table').html(htmTbody)
+    })
+
+    const onCLick = (link, date) => {
+      window.location = link + '?date=' + date 
+    }  
+  </script>
 </body>
 
 </html>

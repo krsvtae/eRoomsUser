@@ -13,6 +13,7 @@
 
 <body id="latarbg"></body>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body style="background-color: #bdb7ab">
@@ -27,7 +28,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-          <!-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               Master
@@ -36,7 +37,7 @@
               <li><a class="dropdown-item" href="./listDept.html">Department</a></li>
               <li><a class="dropdown-item" href="./listRoom.html">Room</a></li>
             </ul>
-          </li> -->
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -48,18 +49,17 @@
               <li><a class="dropdown-item" href="./updateCancel.html">Meeting Schedule</a></li>
             </ul>
           </li>
-          <!-- <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false" data-bs-auto-close="outside">
               Report
-            </a> -->
+            </a>
             <ul class="dropdown-menu" aria-labelledby="navbar-dropdown-link">
               <li><a class="dropdown-item" href="./report.html">Monthly Department</a></li>
               <li><a class="dropdown-item" href="./chart.html">Monthly Meeting Room</a></li>
               <li><a class="dropdown-item" href="./historyDept.html">History Department</a>
               </li>
               <li><a class="dropdown-item" href="./incoming.html">Incoming Meeting</a></li>
-              
               <!-- <li class="dropdown dropend">
                         <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown"
                           aria-expanded="false">Outstanding</a>
@@ -134,7 +134,7 @@
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <a class="btn btn-success" type="button" href="./dashboardRoom.html">
                   Save</a>
-                <a class="btn btn-danger" type="button" href="./dashboardRoom.html"> 
+                <a class="btn btn-danger" type="button" href="javascript:onClick()"> 
                   Cancel</a>
               </div>
             </form>
@@ -146,6 +146,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
+  
+  <script>
+    const onClick = () => {
+      window.history.go(-1); return false;
+    }
+  </script>
 </body>
 
 </html>
