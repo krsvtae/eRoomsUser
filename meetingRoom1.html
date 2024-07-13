@@ -128,15 +128,15 @@
                 <div class="col-4 mt-4">
                   <label class="form-label">End Time : </label>
                   <br>
-                  <input type="time" class="form-control"  />
+                  <input type="time" class="form-control" id="inp-end" value=""  />
                 </div>
               </div>
               <div class="row">
                 <div class="col-4 mt-4 ">
                   <label for="Department" class="form-label">Department :</label>
                   <br>
-                  <select for="Gender" aria-label="Default select example" class="form-control">
-                    <option selected>----------</option>
+                  <select for="Gender" id="sel-dept" aria-label="Default select example" value="0" class="form-control">
+                    <option value="0">----------</option>
                     <option value="1">TTA</option>
                     <option value="2">BOD</option>
                     <option value="3">CPMD</option>
@@ -145,17 +145,17 @@
                 </div>
                 <div class="col-5 mt-4">
                   <label class="form-label" for="form7Example1">Total Person :</label>
-                  <input type="text" id="form7Example1" class="form-control" />
+                  <input type="text" id="inp-person" class="form-control" />
                 </div>
               </div>
               <div class="col-12 mt-4">
                 <label class="form-label" for="form7Example1"> Event :</label>
-                <input type="text" id="form7Example1" class="form-control" />
+                <input type="text" class="form-control" id="inp-event" value="" />
               </div>
               <div class="form-outline mt-2">
                 <label class="form-label " for="form7Example5"> Request :</label>
                 <div class="form-check d-flex justify-content mb-2">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form7Example8" />
+                  <input class="form-check-input me-2" type="checkbox" value="" id="chk-snack" />
                   <label class="form-check-label" for="form7Example8"> <i class="fa-solid fa-bread-slice"
                       style="color: #797c81;"></i>
                     <strong>Snack</strong>
@@ -215,6 +215,27 @@
 
       $('#inp-date').val(date);
       $('#inp-time').val(time);
+
+      let entime = searchParams.get('end')
+      if(entime){
+        $('#inp-end').val(entime)
+      }
+      let event = searchParams.get('event')
+      if(event){
+        $('#inp-event').val(event)
+      }
+      let dept = searchParams.get('dept')
+      if(dept){
+        $('#sel-dept').val(dept).change()
+      }
+      let person = searchParams.get('person')
+      if(person){
+        $('#inp-person').val(person)
+      }
+      let snack = searchParams.get('snack')
+      if(snack){
+        $('#chk-snack').prop('checked', true)
+      }
     })
   </script>
 </body>
